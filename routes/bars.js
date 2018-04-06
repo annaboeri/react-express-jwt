@@ -6,7 +6,8 @@ const
 
 
 barsRouter.get('/', (req, res) => {
-    Bar.find({}, (err, bars) => {
+    //.populate gives us access to the whole user object, not just the id
+    Bar.find({}).populate('user').exec((err, bars) => {
         res.json(bars)
     })
 })
