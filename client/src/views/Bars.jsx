@@ -21,7 +21,7 @@ class Bars extends React.Component {
                 <ul>
                     {bars.map((b) => {
                        return (
-                            <li key={b._id}>{b.name}</li>
+                            <li key={b._id}>{b.name} (Owner: {b.user.name})</li>
                        )
                     })}
                 </ul>
